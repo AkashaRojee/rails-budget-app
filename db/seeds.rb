@@ -9,7 +9,7 @@
 user = User.create! :name => 'John Doe', :email => 'john@mail.com', :password => 'topsecret', :password_confirmation => 'topsecret'
 
 5.times do |i|
-  category = Category.create!(name: "Category ##{i}", user_id: user.id)
+  category = Category.create!(name: "Category ##{i}", icon: "https://cdn-icons-png.flaticon.com/512/2965/2965278.png", user_id: user.id)
 
   5.times do |j|
     purchase = Purchase.create!(name: "C##{i}P##{j}", amount: "#{i+j}", user_id: user.id)
