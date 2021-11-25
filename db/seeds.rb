@@ -12,8 +12,8 @@ user = User.create! :name => 'John Doe', :email => 'john@mail.com', :password =>
   category = Category.create!(name: "Category ##{i}", user_id: user.id)
 
   5.times do |j|
-    purchase = Purchase.create!(name: "C##{i} P##{j}", amount: "#{i+j}", user_id: user.id)
-
+    purchase = Purchase.create!(name: "C##{i}P##{j}", amount: "#{i+j}", user_id: user.id)
+    # category.purchases.push(purchase)
     purchase.categories.push(category)
   end
 end
