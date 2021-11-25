@@ -1,0 +1,6 @@
+<%= form_with(model: category) do |form| %>
+
+  <%= form.text_field :name, autofocus: true, placeholder: "Name", required: true %>
+  <%= form.url_field :icon, placeholder: "Icon", required: true %>
+  <%= form.submit "Save", class: "button has-text-white" %>
+<% end %>
