@@ -2,4 +2,27 @@ class PurchasesController < ApplicationController
   def index
     redirect_to categories_url
   end
+
+  def new
+    @purchase = Purchase.new
+  end
+
+  def create
+    @purchase = Purchase.new(deal_params)
+    @purchase.user = current_user
+
+    respond_to do |format|
+      if @purchase.save
+        format.html { redirect_to @purchase.categories.first }
+      else
+        format.html { render :new }
+      end
+    end
+  end
+
+  private
+
+  def deal_params
+    params.fetch(:purchase, {}).permit(:name, :amount, category_ids: [])
+  end
 end

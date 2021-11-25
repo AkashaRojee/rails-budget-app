@@ -1,1 +1,5 @@
+<%= render "shared/back_button" %>
+
 <%= render 'purchases/index', locals: { purchases: @purchases } %>
+
+<%= link_to 'Add new purchase', new_purchase_path %>

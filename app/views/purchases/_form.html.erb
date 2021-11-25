@@ -1,0 +1,7 @@
+<%= form_with(model: purchase) do |form| %>
+
+  <%= form.text_field :name, autofocus: true, placeholder: "Name", required: true %>
+  <%= form.number_field :amount, placeholder: "Amount", required: true %>
+  <%= form.collection_select :category_ids, current_user.categories.order(:name), :id, :name, {}, { multiple: true } %>
+  <%= form.submit "Save" %>
+<% end %>
