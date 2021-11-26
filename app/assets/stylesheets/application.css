@@ -1,15 +1,8 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
+*= require material_icons
+*/
+
+/*
  *= require_tree .
  *= require_self
  */
@@ -54,6 +47,40 @@
   margin-top: auto;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mt-10 {
+  margin-bottom: 10px;
+}
+
 .screen {
+  padding: 10px;
+}
+
+.material-icons {
+  color: white;
+}
+
+/** LOGIN **/
+
+.header {
+  padding: 10px;
+  background-color: #3778c2;
+  color: white;
+}
+
+.actions input {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.field input {
   padding: 10px;
 }
