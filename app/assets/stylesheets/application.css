@@ -27,12 +27,20 @@
   align-items: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .gap-10 {
   gap: 10px;
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
 }
 
 .w-full {
