@@ -10,7 +10,7 @@ class PurchasesController < ApplicationController
   end
 
   def create
-    @purchase = Purchase.new(deal_params)
+    @purchase = Purchase.new(purchase_params)
     @purchase.user = current_user
 
     respond_to do |format|
@@ -24,7 +24,7 @@ class PurchasesController < ApplicationController
 
   private
 
-  def deal_params
+  def purchase_params
     params.fetch(:purchase, {}).permit(:name, :amount, category_ids: [])
   end
 end
