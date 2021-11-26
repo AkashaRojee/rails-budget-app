@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Category, type: :model do
   describe 'validates' do
-    subject { FactoryBot.build :user }
+    subject { FactoryBot.build :category }
 
     it 'should have a name' do
       subject.name = nil
@@ -19,26 +19,26 @@ RSpec.describe User, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'should have an email' do
-      subject.email = nil
+    it 'should have an icon' do
+      subject.icon = nil
       expect(subject).to_not be_valid
     end
   end
 
   describe 'association' do
-    context 'has-many categories' do
-      subject { FactoryBot.build(:user_categories, categories_count: 3) }
+    context 'belong-to user' do
+      subject { FactoryBot.build :category }
 
-      it 'should have categories' do
-        expect(subject.categories.length).to be 3
+      it 'should have a user' do
+        expect(subject.user).to be_present
       end
     end
 
     context 'has-many purchases' do
-      subject { FactoryBot.build(:user_purchases, purchases_count: 5) }
+      subject { FactoryBot.build :category_purchases, purchases_count: 10 }
 
       it 'should have purchases' do
-        expect(subject.purchases.length).to be 5
+        expect(subject.purchases.length).to be 10
       end
     end
   end
