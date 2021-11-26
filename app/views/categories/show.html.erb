@@ -1,5 +1,18 @@
-<%= render "shared/back_button" %>
+<div class="container">
 
-<%= render 'purchases/index', locals: { purchases: @purchases } %>
+  <div class="header flex-row align-center mt-10">
 
-<%= link_to 'Add new purchase', new_purchase_path %>
+    <%= render "shared/back_button" %>
+
+    <h2 class="mr-auto ml-auto">PURCHASES</h2>
+
+  </div>
+
+  <ul class="flex-col list-col gap-10">
+    <%= render 'purchases/index', locals: { purchases: @purchases } %>
+  </ul>
+
+  <div class="list-button">
+    <%= link_to 'ADD NEW PURCHASE', new_purchase_path %>
+  </div>
+</div>

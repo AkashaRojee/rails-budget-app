@@ -1,6 +1,7 @@
-<div>
-  <%= purchase.name %>
-</div>
-<div>
-  <%= purchase.amount %>
-</div>
+<li class="flex-row data-row link justify-between">
+  <div class="flex-col justify-between gap-10">
+    <span><%= purchase.name %></span>
+    <span><%= purchase.created_at.strftime("%d %b %Y") %></span>
+  </div>
+  <span class="text-bold">$<%= purchase.amount %></span>
+</li>
