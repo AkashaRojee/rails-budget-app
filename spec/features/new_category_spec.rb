@@ -21,6 +21,6 @@ RSpec.feature 'NewCategory', type: :feature do
       fill_in 'Name', with: category.name
     end
     click_button 'Save'
-    expect(page).to have_content "ADD NEW CATEGORY"
+    expect(page).to have_content 'ADD NEW CATEGORY'
   end
 end

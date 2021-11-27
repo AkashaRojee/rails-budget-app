@@ -27,6 +27,6 @@ RSpec.feature 'NewPurchase', type: :feature do
       fill_in 'Amount', with: purchase.amount
     end
     click_button 'Save'
-    expect(page).to have_content "ADD NEW PURCHASE"
+    expect(page).to have_content 'ADD NEW PURCHASE'
   end
 end

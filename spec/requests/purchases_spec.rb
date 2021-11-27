@@ -15,7 +15,8 @@ RSpec.describe '/purchases', type: :request do
       it 'creates a new purchase' do
         expect do
           post purchases_url,
-               params: { purchase: FactoryBot.attributes_for(:purchase, category_ids: [FactoryBot.create(:category).id]) }
+               params: { purchase: FactoryBot.attributes_for(:purchase,
+                                                             category_ids: [FactoryBot.create(:category).id]) }
         end.to change(Purchase, :count).by(1)
       end
     end
