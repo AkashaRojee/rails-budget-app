@@ -8,6 +8,8 @@ It allows you to manage your budget: you have a list of transactions associated 
 
 The [original design idea](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source) is by Gregoire Vella on Behance.
 
+Video presentation: [view](https://www.loom.com/share/a184721dace7458fb6e84c7aa5fcbf25)
+
 ## Built With
 
 - Major languages: Ruby
