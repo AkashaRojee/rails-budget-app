@@ -19,6 +19,8 @@ To get a local copy up and running, follow the steps below in your terminal.
 
 - Ruby
 - Rails
+- PostgreSQL
+- Heroku
 
 ### Setup
 
@@ -35,6 +37,8 @@ To serve the website:
 ```
 rails server
 ```
+
+The website is deployed on Heroku [here](https://secure-caverns-48843.herokuapp.com)
 
 ## Author
 
